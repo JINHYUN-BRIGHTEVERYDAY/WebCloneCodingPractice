@@ -1,29 +1,36 @@
-*{
+/* 전체 선택자에 대함 */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* header 다음 영역 */
 body {
-    background-color: darkslateblue;
+    background-color: darkslateblue; 
+    /* 전체 배경색을 바꾼 것 */
 }
 
-.wrap {
-    position: absolute;    
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    color:white;
-    text-align: center; 
+
+/* body태그 안의 wrap 태그에 대한 설정 */
+.wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: translate이다. transform만 쓰면 안된다 */
+    color: white;
+    text-align: center;
 }
 
 .material-icons {
-    font-size: 10rem;
+    font-size: 5rem;
 }
 
 .lg-text {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: bold;    
     margin-bottom: 5px;
 }
 
@@ -40,14 +47,8 @@ body {
     display: block;
     position: absolute;
     top: 0;
-    right: -10px;
+    right: 0;
     width: 4px;
     height: 100%;
     background-color: white;
-
 }
-
-#dynamic.active::after{
-    display: none;
-}
-
