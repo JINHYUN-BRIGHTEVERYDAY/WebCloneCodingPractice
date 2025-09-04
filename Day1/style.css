@@ -22,33 +22,50 @@ body {
     /* transform: translate이다. transform만 쓰면 안된다 */
     color: white;
     text-align: center;
+    /* body 안에 div로 wrap이 감싸져있음 이 안에 텍스트도 있고 많음
+    그러므로 이것들을 모두 중앙 정렬하기 위함 
+    text-align: center은 그런 역할 */
+    /* 아이콘 폰트는 CSS의 텍트스와 관련된 속성을 그대로 적용할 수 있다 */
 }
 
+
+/* wrap 안에 있는 것들 */
 .material-icons {
-    font-size: 5rem;
+    font-size: 10rem;
 }
 
 .lg-text {
     font-size: 2rem;
     font-weight: bold;    
     margin-bottom: 5px;
+    /* margin-bottom: 텍스트가 여러 줄일 때에 그 간격을 떨어뜨리기위함 */
 }
 
 .sm-text {
     font-size: 1.5rem;
 }
 
+
+/* wrap 안의 dynamic */
 #dynamic {
     position: relative;
+    display: inline-block;
+    /* display: inline-block을 설정해야 하는 이유 */
 }
 
+/* 가상 요소들 */
 #dynamic::after {
     content: "";
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -10px;
     width: 4px;
     height: 100%;
     background-color: white;
+}
+
+/* 가상 요소들 */
+#dynamic.active::after {
+    display: none;
 }
